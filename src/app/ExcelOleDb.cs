@@ -149,7 +149,8 @@ using (DbConnection connection = factory.CreateConnection())
             switch (format)
             {
                 case OfficeFileFormat.Excel97_2003:
-                    connString = string.Format("Provider=Microsoft.Jet.Oledb.4.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1;\"", xlsPath);
+                ////    connString = string.Format("Provider=Microsoft.Jet.Oledb.4.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1;\"", xlsPath);
+                    connString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1;\"", xlsPath);
                     break;
                 case OfficeFileFormat.Excel2007:
                     connString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR=YES\";", xlsPath);
