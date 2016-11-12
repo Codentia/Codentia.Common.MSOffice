@@ -38,12 +38,6 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Common.Data">
-      <HintPath>..\..\..\Codentia.Common.Membership\packages\Codentia.Common.Data.dll.4.0.0.4\lib\Codentia.Common.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Logging">
-      <HintPath>..\..\..\Codentia.Common.Reporting\packages\Codentia.Common.Logging.dll.3.0.0.1\lib\Codentia.Common.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="Codentia.Test">
       <HintPath>..\..\packages\Codentia.Test.dll.2.0.0.1\lib\Codentia.Test.dll</HintPath>
     </Reference>
