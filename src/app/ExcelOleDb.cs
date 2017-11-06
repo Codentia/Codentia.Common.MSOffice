@@ -149,7 +149,7 @@ using (DbConnection connection = factory.CreateConnection())
             switch (format)
             {
                 case OfficeFileFormat.Excel97_2003:
-                    connString = string.Format("Provider=Microsoft.Jet.Oledb.4.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1;\"", xlsPath);
+                    connString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1;\"", xlsPath);
                     break;
                 case OfficeFileFormat.Excel2007:
                     connString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR=YES\";", xlsPath);
@@ -165,7 +165,7 @@ using (DbConnection connection = factory.CreateConnection())
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Unable to open the specified file - NOTE that 'enable 32bit' is required in IIS7/64bit!", ex);
+                    throw new Exception(string.Format("Unable to open the specified file: {0} (NOTE that 'enable 32bit' is required in IIS7/64bit!)", ex.Message));
                 }
             }
             else
